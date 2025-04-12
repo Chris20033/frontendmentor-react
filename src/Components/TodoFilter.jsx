@@ -7,7 +7,7 @@ function TodoFilter({ filter, setFilter }) {
                     className={
                         filter == "All"
                             ? "text-blue-600 hover:text-gray-400"
-                            : "text-black hover:text-blue-600"
+                            : "text-black hover:text-blue-600 dark:text-white transition-all duration-1000"
                     }
                 >
                     All
@@ -17,7 +17,7 @@ function TodoFilter({ filter, setFilter }) {
                     className={
                         filter == "Active"
                             ? "text-blue-600 hover:text-gray-400"
-                            : "text-black hover:text-blue-600"
+                            : "text-black hover:text-blue-600 dark:text-white"
                     }
                 >
                     Active
@@ -27,7 +27,7 @@ function TodoFilter({ filter, setFilter }) {
                     className={
                         filter == "Completed"
                             ? "text-blue-600 hover:text-gray-400"
-                            : "text-black hover:text-blue-600"
+                            : "text-black hover:text-blue-600 dark:text-white"
                     }
                 >
                     Completed
