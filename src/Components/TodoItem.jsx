@@ -1,17 +1,18 @@
 import CheckIcon from "./icons/CheckIcon";
 import CrossIcon from "./icons/CrossIcon";
+import React from "react";
 
-function TodoItem({ todo, changeCompleted, deleteTodo }) {
+const TodoItem = React.forwardRef(({ todo, changeCompleted, deleteTodo, ...props }, ref) => {
     const { id, title, completed } = todo;
     return (
         <div>
-            <article className="flex items-center justify-around gap-4 border-b border-gray-300 bg-white p-3 transition-all duration-1000 dark:bg-gray-800">
+            <article {...props} ref={ref} className="flex items-center justify-around gap-4 border-b border-gray-300 bg-white p-3  dark:bg-gray-800">
                 <button
                     onClick={() => changeCompleted(id)}
                     className={
                         completed
                             ? "flex h-6 w-6 items-center justify-center rounded-full border-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:border-white"
-                            : "inline-block h-6 w-6 rounded-full border-2 transition-all duration-1000 dark:border-white"
+                            : "inline-block h-6 w-6 rounded-full border-2 dark:border-white"
                     }
                 >
                     {completed && <CheckIcon />}
@@ -26,7 +27,7 @@ function TodoItem({ todo, changeCompleted, deleteTodo }) {
                 </button>
             </article>
         </div>
-    );
-}
+    )
+})
 
 export default TodoItem;
