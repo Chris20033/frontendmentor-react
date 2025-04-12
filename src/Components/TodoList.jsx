@@ -8,7 +8,7 @@ function TodoList({ todos, changeCompleted, deleteTodo }) {
                 <div
                     ref={droppableProvider.innerRef}
                     {...droppableProvider.droppableProps}
-                    className="mt-8 rounded-t-md bg-white px-4 transition-all duration-1000 dark:bg-gray-800 [&>article]:p-4"
+                    className="mt-8 rounded-t-md bg-white px-4 dark:bg-gray-800 [&>article]:p-4"
                 >
                     {todos.map((todo, index) => (
                         <Draggable

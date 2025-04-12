@@ -1,13 +1,13 @@
 function TodoFilter({ filter, setFilter }) {
     return (
         <section className="container mx-auto mt-8">
-            <div className="mt-6 flex justify-evenly rounded-md bg-white p-4 transition-all duration-1000 dark:bg-gray-800">
+            <div className="mt-6 flex justify-evenly rounded-md bg-white p-4 dark:bg-gray-800">
                 <button
                     onClick={() => setFilter("All")}
                     className={
                         filter == "All"
                             ? "text-blue-600 hover:text-gray-400"
-                            : "text-black hover:text-blue-600 dark:text-white transition-all duration-1000"
+                            : "text-black hover:text-blue-600 dark:text-white"
                     }
                 >
                     All
